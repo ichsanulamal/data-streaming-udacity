@@ -1,0 +1,97 @@
+Sep 29, 2020 5:14:13 PM com.getsimplex.steptimer.service.KafkaRiskTopicConsumerActor onReceive
+INFO: Connecting to Kafka Topic: customer-risk
+[websocket-akka.actor.default-dispatcher-6] INFO org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-STEDI-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = STEDI
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+Unable to create test user due to exception: Username already exists
+Unable to create customer due to exception: Customer already exists
+[Thread-1] INFO org.eclipse.jetty.util.log - Logging initialized @1720ms
+[Thread-1] INFO spark.webserver.JettySparkServer - == Spark has ignited ...
+[Thread-1] INFO spark.webserver.JettySparkServer - >> Listening on 0.0.0.0:3000
+[Thread-1] INFO org.eclipse.jetty.server.Server - jetty-9.3.z-SNAPSHOT
+[websocket-akka.actor.default-dispatcher-6] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.6.0
+[websocket-akka.actor.default-dispatcher-6] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 62abe01bee039651
+[websocket-akka.actor.default-dispatcher-6] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1601399654621
+[websocket-akka.actor.default-dispatcher-6] INFO org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Subscribed to topic(s): topic-you-created
+[Thread-1] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@cbb4d1{/,null,AVAILABLE}
+[Thread-1] INFO org.eclipse.jetty.server.ServerConnector - Started ServerConnector@6eded6c3{HTTP/1.1,[http/1.1]}{0.0.0.0:3000}
+[Thread-1] INFO org.eclipse.jetty.server.Server - Started @2270ms
+[websocket-akka.actor.default-dispatcher-6] INFO org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Cluster ID: PlSTksYcT9mmdwlAHsjmTw
+[websocket-akka.actor.default-dispatcher-6] INFO org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Discovered group coordinator 27c060ec0f5b:9092 (id: 2147483647 rack: null)
+[websocket-akka.actor.default-dispatcher-6] INFO org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] (Re-)joining group
+[websocket-akka.actor.default-dispatcher-6] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Finished assignment for group at generation 3: {consumer-STEDI-1-5837b3b0-92e0-4672-8448-1a5bb0320d8e=Assignment(partitions=[topic-you-created-0])}
+[websocket-akka.actor.default-dispatcher-6] INFO org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Successfully joined group with generation 3
+[websocket-akka.actor.default-dispatcher-6] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Notifying assignor about the new Assignment(partitions=[topic-you-created-0])
+[websocket-akka.actor.default-dispatcher-6] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Adding newly assigned partitions: topic-you-created-0
+[websocket-akka.actor.default-dispatcher-6] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Setting offset for partition topic-you-created-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[27c060ec0f5b:9092 (id: 0 rack: null)], epoch=absent}}

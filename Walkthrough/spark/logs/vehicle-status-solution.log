@@ -1,0 +1,41 @@
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++-----------+------------+-------------+---------------+
+|truckNumber| destination|milesFromShop|odometerReading|
++-----------+------------+-------------+---------------+
+|       4382|        Iowa|          514|           null|
+|       4600|     Florida|           32|           null|
+|       1414|   Wisconsin|          255|           null|
+|       4600|      Nevada|           31|           null|
+|       8110|       Texas|          449|           null|
+|       5976|   Louisiana|          424|           null|
+|       8034|      Nevada|          553|           null|
+|       1243|      Canada|           53|           null|
+|       8434|       Texas|          383|           null|
+|       9000|     Colardo|           92|           null|
+|       1076|   Louisiana|          821|           null|
+|       4553|     Arizona|          647|           null|
+|       1076|   Tennessee|          819|           null|
+|       8347|     Colardo|          333|           null|
+|       4600|  New Mexico|           29|           null|
+|       1243|      Nevada|           53|           null|
+|       5976|Pennsylvania|          424|           null|
+|       9910|       Texas|          352|           null|
+|       1076|     Georgia|          819|           null|
+|       6618|   Louisiana|           24|           null|
++-----------+------------+-------------+---------------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 1
+-------------------------------------------
++-----------+------------+-------------+---------------+
+|truckNumber| destination|milesFromShop|odometerReading|
++-----------+------------+-------------+---------------+
+|       9974|   Tennessee|          221|         335048|
+|       3575|      Canada|          354|          74000|
+|       1444|      Nevada|          257|         395616|
+|       5540|South Dakota|          856|         176293|
++-----------+------------+-------------+---------------+
+

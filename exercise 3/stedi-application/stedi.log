@@ -1,0 +1,1595 @@
+Oct 06, 2020 1:24:00 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Creating Kafka Producer
+Customer already exists
+Customer already exists
+Customer already exists
+Oct 06, 2020 1:24:01 PM com.getsimplex.steptimer.service.KafkaRiskTopicConsumerActor onReceive
+INFO: Connecting to Kafka Topic: customer-risk
+[websocket-akka.actor.default-dispatcher-2] INFO org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = STEDI
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = false
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+[websocket-akka.actor.default-dispatcher-3] INFO org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-STEDI-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = STEDI
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+Unable to create test user due to exception: Username already exists
+Unable to create customer due to exception: Customer already exists
+[Thread-1] INFO org.eclipse.jetty.util.log - Logging initialized @3201ms
+[websocket-akka.actor.default-dispatcher-2] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.6.0
+[websocket-akka.actor.default-dispatcher-2] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 62abe01bee039651
+[websocket-akka.actor.default-dispatcher-2] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1601990641657
+Oct 06, 2020 1:24:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Craig Khatib","email":"Craig.Khatib@test.com","phone":"1015551212","birthDay":"1965-01-01","accountNumber":"911811823","location":"Georgia"}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[Thread-1] INFO spark.webserver.JettySparkServer - == Spark has ignited ...
+[Thread-1] INFO spark.webserver.JettySparkServer - >> Listening on 0.0.0.0:3000
+[websocket-akka.actor.default-dispatcher-3] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version: 2.6.0
+[websocket-akka.actor.default-dispatcher-3] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 62abe01bee039651
+[websocket-akka.actor.default-dispatcher-3] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1601990641764
+[Thread-1] INFO org.eclipse.jetty.server.Server - jetty-9.3.z-SNAPSHOT
+[websocket-akka.actor.default-dispatcher-3] INFO org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Subscribed to topic(s): topic-you-created
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[Thread-1] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@4608bdc0{/,null,AVAILABLE}
+[Thread-1] INFO org.eclipse.jetty.server.ServerConnector - Started ServerConnector@4f9e1391{HTTP/1.1,[http/1.1]}{0.0.0.0:3000}
+[Thread-1] INFO org.eclipse.jetty.server.Server - Started @4072ms
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 2 : {bank-customers=LEADER_NOT_AVAILABLE}
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Error while fetching metadata with correlation id 3 : {topic-you-created=LEADER_NOT_AVAILABLE}
+[kafka-producer-network-thread | STEDI] INFO org.apache.kafka.clients.Metadata - [Producer clientId=STEDI] Cluster ID: 8QnxriW-TuWtpEhjQpYToA
+[websocket-akka.actor.default-dispatcher-3] INFO org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Cluster ID: 8QnxriW-TuWtpEhjQpYToA
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 5 : {bank-customers=LEADER_NOT_AVAILABLE}
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Error while fetching metadata with correlation id 7 : {topic-you-created=LEADER_NOT_AVAILABLE}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 6 : {bank-customers=LEADER_NOT_AVAILABLE}
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Error while fetching metadata with correlation id 9 : {topic-you-created=LEADER_NOT_AVAILABLE}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 7 : {bank-customers=LEADER_NOT_AVAILABLE}
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Error while fetching metadata with correlation id 11 : {topic-you-created=LEADER_NOT_AVAILABLE}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 8 : {bank-customers=LEADER_NOT_AVAILABLE}
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Error while fetching metadata with correlation id 13 : {topic-you-created=LEADER_NOT_AVAILABLE}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 9 : {bank-customers=LEADER_NOT_AVAILABLE}
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Error while fetching metadata with correlation id 15 : {topic-you-created=LEADER_NOT_AVAILABLE}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 10 : {bank-customers=LEADER_NOT_AVAILABLE}
+[websocket-akka.actor.default-dispatcher-3] WARN org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Error while fetching metadata with correlation id 17 : {topic-you-created=LEADER_NOT_AVAILABLE}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Jacob Jefferson","email":"Jacob.Jefferson@test.com","phone":"0015551212","birthDay":"1964-01-01","accountNumber":"472233268","location":"France"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Spencer Doshi","email":"Spencer.Doshi@test.com","phone":"0015551212","birthDay":"1963-01-01","accountNumber":"508265354","location":"Argentina"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Chris Habschied","email":"Chris.Habschied@test.com","phone":"5015551212","birthDay":"1962-01-01","accountNumber":"875344779","location":"Jordan"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Danny Fibonnaci","email":"Danny.Fibonnaci@test.com","phone":"1015551212","birthDay":"1961-01-01","accountNumber":"906703802","location":"Ivory Coast"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Dan Davis","email":"Dan.Davis@test.com","phone":"6015551212","birthDay":"1960-01-01","accountNumber":"155576996","location":"Afghanistan"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Angie Staples","email":"Angie.Staples@test.com","phone":"3015551212","birthDay":"1959-01-01","accountNumber":"226155962","location":"Ivory Coast"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Santosh Anderson","email":"Santosh.Anderson@test.com","phone":"8015551212","birthDay":"1957-01-01","accountNumber":"949585961","location":"Brazil"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Ben Sanchez","email":"Ben.Sanchez@test.com","phone":"8015551212","birthDay":"1956-01-01","accountNumber":"640795653","location":"Ivory Coast"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Chris Wu","email":"Chris.Wu@test.com","phone":"6015551212","birthDay":"1955-01-01","accountNumber":"470457781","location":"Iraq"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Jerry Howard","email":"Jerry.Howard@test.com","phone":"3015551212","birthDay":"1954-01-01","accountNumber":"353044431","location":"Canada"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Danny Gonzalez","email":"Danny.Gonzalez@test.com","phone":"3015551212","birthDay":"1953-01-01","accountNumber":"502154118","location":"United Arab Emirates"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Travis Phillips","email":"Travis.Phillips@test.com","phone":"7015551212","birthDay":"1952-01-01","accountNumber":"781049940","location":"Canada"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Christina Jones","email":"Christina.Jones@test.com","phone":"1015551212","birthDay":"1951-01-01","accountNumber":"85903913","location":"Thailand"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Travis Spencer","email":"Travis.Spencer@test.com","phone":"5015551212","birthDay":"1950-01-01","accountNumber":"103397629","location":"Ghana"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Ashley Wu","email":"Ashley.Wu@test.com","phone":"2015551212","birthDay":"1948-01-01","accountNumber":"511440623","location":"South Africa"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Jason Clark","email":"Jason.Clark@test.com","phone":"8015551212","birthDay":"1947-01-01","accountNumber":"764001205","location":"Nigeria"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Lyn Abram","email":"Lyn.Abram@test.com","phone":"5015551212","birthDay":"1946-01-01","accountNumber":"102686209","location":"Indonesia"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Travis Jones","email":"Travis.Jones@test.com","phone":"6015551212","birthDay":"1944-01-01","accountNumber":"232822521","location":"Nigeria"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Danny Abram","email":"Danny.Abram@test.com","phone":"6015551212","birthDay":"1943-01-01","accountNumber":"332845357","location":"Ukraine"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Danny Sanchez","email":"Danny.Sanchez@test.com","phone":"6015551212","birthDay":"1942-01-01","accountNumber":"176333063","location":"Uganda"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Sean Phillips","email":"Sean.Phillips@test.com","phone":"3015551212","birthDay":"1941-01-01","accountNumber":"739759901","location":"Indonesia"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Jerry Habschied","email":"Jerry.Habschied@test.com","phone":"5015551212","birthDay":"1940-01-01","accountNumber":"485641801","location":"Ivory Coast"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Christina Phillips","email":"Christina.Phillips@test.com","phone":"2015551212","birthDay":"1939-01-01","accountNumber":"267930056","location":"Togo"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Ashley Sanchez","email":"Ashley.Sanchez@test.com","phone":"1015551212","birthDay":"1938-01-01","accountNumber":"726726878","location":"Afghanistan"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-customers message: {"customerName":"Sarah Ahmed","email":"Sarah.Ahmed@test.com","phone":"0015551212","birthDay":"1937-01-01","accountNumber":"347192113","location":"DR Congo"}
+Oct 06, 2020 1:24:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:01 PM","transactionId":1601990641133,"atmLocation":"Georgia"}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 38 : {atm-withdrawals=LEADER_NOT_AVAILABLE}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 39 : {atm-withdrawals=LEADER_NOT_AVAILABLE}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 40 : {atm-withdrawals=LEADER_NOT_AVAILABLE}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 41 : {atm-withdrawals=LEADER_NOT_AVAILABLE}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 42 : {atm-withdrawals=LEADER_NOT_AVAILABLE}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 43 : {atm-withdrawals=LEADER_NOT_AVAILABLE}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 44 : {atm-withdrawals=LEADER_NOT_AVAILABLE}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 45 : {atm-withdrawals=LEADER_NOT_AVAILABLE}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 46 : {atm-withdrawals=LEADER_NOT_AVAILABLE}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 47 : {atm-withdrawals=LEADER_NOT_AVAILABLE}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 48 : {atm-withdrawals=LEADER_NOT_AVAILABLE}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 49 : {atm-withdrawals=LEADER_NOT_AVAILABLE}
+[websocket-akka.actor.default-dispatcher-3] INFO org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Discovered group coordinator 9132e5afe38b:9092 (id: 2147483647 rack: null)
+[websocket-akka.actor.default-dispatcher-3] INFO org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] (Re-)joining group
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"911811823","amount":701.5,"dateAndTime":"Oct 6, 2020 1:24:01 PM","transactionId":1601990641133}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 52 : {bank-withdrawals=LEADER_NOT_AVAILABLE}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 14498.95
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 55 : {balance-updates=LEADER_NOT_AVAILABLE}
+[websocket-akka.actor.default-dispatcher-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Finished assignment for group at generation 1: {consumer-STEDI-1-98883e56-8c49-496b-af45-40e7eb0ad2c3=Assignment(partitions=[topic-you-created-0])}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Georgia
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 58 : {atm-visits=LEADER_NOT_AVAILABLE}
+[websocket-akka.actor.default-dispatcher-3] INFO org.apache.kafka.clients.consumer.internals.AbstractCoordinator - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Successfully joined group with generation 1
+[websocket-akka.actor.default-dispatcher-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Notifying assignor about the new Assignment(partitions=[topic-you-created-0])
+[websocket-akka.actor.default-dispatcher-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Adding newly assigned partitions: topic-you-created-0
+[websocket-akka.actor.default-dispatcher-3] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Found no committed offset for partition topic-you-created-0
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"911811823","amount":706.63,"dateAndTime":"Oct 6, 2020 1:24:01 PM"}
+[kafka-producer-network-thread | STEDI] WARN org.apache.kafka.clients.NetworkClient - [Producer clientId=STEDI] Error while fetching metadata with correlation id 61 : {bank-deposits=LEADER_NOT_AVAILABLE}
+[websocket-akka.actor.default-dispatcher-3] INFO org.apache.kafka.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-STEDI-1, groupId=STEDI] Resetting offset for partition topic-you-created-0 to offset 0.
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:03 PM","transactionId":1601990643142,"atmLocation":"Nigeria"}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"472233268","amount":566.86,"dateAndTime":"Oct 6, 2020 1:24:03 PM","transactionId":1601990643142}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 62117.8
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: France
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"472233268","amount":526.69,"dateAndTime":"Oct 6, 2020 1:24:03 PM"}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:05 PM","transactionId":1601990645144,"atmLocation":"Argentina"}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"508265354","amount":955.2,"dateAndTime":"Oct 6, 2020 1:24:05 PM","transactionId":1601990645144}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 90906.57
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Argentina
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"508265354","amount":171.29,"dateAndTime":"Oct 6, 2020 1:24:05 PM"}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:07 PM","transactionId":1601990647146,"atmLocation":"Jordan"}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"875344779","amount":302.91,"dateAndTime":"Oct 6, 2020 1:24:07 PM","transactionId":1601990647146}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 39358.96
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Jordan
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"875344779","amount":449.25,"dateAndTime":"Oct 6, 2020 1:24:07 PM"}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:09 PM","transactionId":1601990649147,"atmLocation":"Ivory Coast"}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"906703802","amount":932.34,"dateAndTime":"Oct 6, 2020 1:24:09 PM","transactionId":1601990649147}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 77470.82
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"906703802","amount":505.44,"dateAndTime":"Oct 6, 2020 1:24:09 PM"}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 69752.70
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:11 PM","transactionId":1601990651149,"atmLocation":"Afghanistan"}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"155576996","amount":603.76,"dateAndTime":"Oct 6, 2020 1:24:11 PM","transactionId":1601990651149}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Afghanistan
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"155576996","amount":275.5,"dateAndTime":"Oct 6, 2020 1:24:11 PM"}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 55495.67
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:13 PM","transactionId":1601990653150,"atmLocation":"Australia"}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"226155962","amount":395.53,"dateAndTime":"Oct 6, 2020 1:24:13 PM","transactionId":1601990653150}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"226155962","amount":668.36,"dateAndTime":"Oct 6, 2020 1:24:13 PM"}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 59662.44
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:15 PM","transactionId":1601990655151,"atmLocation":"Brazil"}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"949585961","amount":529.41,"dateAndTime":"Oct 6, 2020 1:24:15 PM","transactionId":1601990655151}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Brazil
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"949585961","amount":772.66,"dateAndTime":"Oct 6, 2020 1:24:15 PM"}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 51289.61
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:17 PM","transactionId":1601990657152,"atmLocation":"Ivory Coast"}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"640795653","amount":758.4,"dateAndTime":"Oct 6, 2020 1:24:17 PM","transactionId":1601990657152}
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:24:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"640795653","amount":637.9,"dateAndTime":"Oct 6, 2020 1:24:17 PM"}
+Oct 06, 2020 1:24:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 53462.70
+Oct 06, 2020 1:24:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:19 PM","transactionId":1601990659156,"atmLocation":"Iraq"}
+Oct 06, 2020 1:24:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"470457781","amount":559.49,"dateAndTime":"Oct 6, 2020 1:24:19 PM","transactionId":1601990659156}
+Oct 06, 2020 1:24:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Iraq
+Oct 06, 2020 1:24:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"470457781","amount":832.47,"dateAndTime":"Oct 6, 2020 1:24:19 PM"}
+Oct 06, 2020 1:24:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 79869.10
+Oct 06, 2020 1:24:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:21 PM","transactionId":1601990661158,"atmLocation":"France"}
+Oct 06, 2020 1:24:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"353044431","amount":370.68,"dateAndTime":"Oct 6, 2020 1:24:21 PM","transactionId":1601990661158}
+Oct 06, 2020 1:24:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Canada
+Oct 06, 2020 1:24:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"353044431","amount":711.11,"dateAndTime":"Oct 6, 2020 1:24:21 PM"}
+Oct 06, 2020 1:24:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 22175.95
+Oct 06, 2020 1:24:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:23 PM","transactionId":1601990663159,"atmLocation":"United Arab Emirates"}
+Oct 06, 2020 1:24:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"502154118","amount":657.77,"dateAndTime":"Oct 6, 2020 1:24:23 PM","transactionId":1601990663159}
+Oct 06, 2020 1:24:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: United Arab Emirates
+Oct 06, 2020 1:24:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"502154118","amount":361.51,"dateAndTime":"Oct 6, 2020 1:24:23 PM"}
+Oct 06, 2020 1:24:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 92522.2
+Oct 06, 2020 1:24:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:25 PM","transactionId":1601990665163,"atmLocation":"Canada"}
+Oct 06, 2020 1:24:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"781049940","amount":748.38,"dateAndTime":"Oct 6, 2020 1:24:25 PM","transactionId":1601990665163}
+Oct 06, 2020 1:24:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Canada
+Oct 06, 2020 1:24:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"781049940","amount":358.67,"dateAndTime":"Oct 6, 2020 1:24:25 PM"}
+Oct 06, 2020 1:24:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 59294.36
+Oct 06, 2020 1:24:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:27 PM","transactionId":1601990667167,"atmLocation":"Thailand"}
+Oct 06, 2020 1:24:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"85903913","amount":263.1,"dateAndTime":"Oct 6, 2020 1:24:27 PM","transactionId":1601990667167}
+Oct 06, 2020 1:24:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Thailand
+Oct 06, 2020 1:24:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"85903913","amount":422.7,"dateAndTime":"Oct 6, 2020 1:24:27 PM"}
+Oct 06, 2020 1:24:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 65066.22
+Oct 06, 2020 1:24:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:29 PM","transactionId":1601990669173,"atmLocation":"Ghana"}
+Oct 06, 2020 1:24:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"103397629","amount":258.33,"dateAndTime":"Oct 6, 2020 1:24:29 PM","transactionId":1601990669173}
+Oct 06, 2020 1:24:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ghana
+Oct 06, 2020 1:24:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"103397629","amount":729.9,"dateAndTime":"Oct 6, 2020 1:24:29 PM"}
+Oct 06, 2020 1:24:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 57264.4
+Oct 06, 2020 1:24:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:31 PM","transactionId":1601990671174,"atmLocation":"New Zealand"}
+Oct 06, 2020 1:24:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"511440623","amount":941.31,"dateAndTime":"Oct 6, 2020 1:24:31 PM","transactionId":1601990671174}
+Oct 06, 2020 1:24:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: South Africa
+Oct 06, 2020 1:24:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"511440623","amount":563.84,"dateAndTime":"Oct 6, 2020 1:24:31 PM"}
+Oct 06, 2020 1:24:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 24417.14
+Oct 06, 2020 1:24:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:33 PM","transactionId":1601990673176,"atmLocation":"Egypt"}
+Oct 06, 2020 1:24:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"764001205","amount":131.0,"dateAndTime":"Oct 6, 2020 1:24:33 PM","transactionId":1601990673176}
+Oct 06, 2020 1:24:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Nigeria
+Oct 06, 2020 1:24:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"764001205","amount":675.54,"dateAndTime":"Oct 6, 2020 1:24:33 PM"}
+Oct 06, 2020 1:24:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 14840.8
+Oct 06, 2020 1:24:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:35 PM","transactionId":1601990675177,"atmLocation":"Indonesia"}
+Oct 06, 2020 1:24:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"102686209","amount":109.3,"dateAndTime":"Oct 6, 2020 1:24:35 PM","transactionId":1601990675177}
+Oct 06, 2020 1:24:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Indonesia
+Oct 06, 2020 1:24:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"102686209","amount":639.75,"dateAndTime":"Oct 6, 2020 1:24:35 PM"}
+Oct 06, 2020 1:24:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 44679.22
+Oct 06, 2020 1:24:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:37 PM","transactionId":1601990677178,"atmLocation":"Nigeria"}
+Oct 06, 2020 1:24:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"232822521","amount":632.2,"dateAndTime":"Oct 6, 2020 1:24:37 PM","transactionId":1601990677178}
+Oct 06, 2020 1:24:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Nigeria
+Oct 06, 2020 1:24:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"232822521","amount":212.65,"dateAndTime":"Oct 6, 2020 1:24:37 PM"}
+Oct 06, 2020 1:24:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 55971.90
+Oct 06, 2020 1:24:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:39 PM","transactionId":1601990679179,"atmLocation":"Ukraine"}
+Oct 06, 2020 1:24:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"332845357","amount":874.97,"dateAndTime":"Oct 6, 2020 1:24:39 PM","transactionId":1601990679179}
+Oct 06, 2020 1:24:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ukraine
+Oct 06, 2020 1:24:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"332845357","amount":942.0,"dateAndTime":"Oct 6, 2020 1:24:39 PM"}
+Oct 06, 2020 1:24:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 28835.67
+Oct 06, 2020 1:24:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:41 PM","transactionId":1601990681181,"atmLocation":"Uganda"}
+Oct 06, 2020 1:24:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"176333063","amount":414.37,"dateAndTime":"Oct 6, 2020 1:24:41 PM","transactionId":1601990681181}
+Oct 06, 2020 1:24:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Uganda
+Oct 06, 2020 1:24:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"176333063","amount":39.37,"dateAndTime":"Oct 6, 2020 1:24:41 PM"}
+Oct 06, 2020 1:24:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 7765.40
+Oct 06, 2020 1:24:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Indonesia
+Oct 06, 2020 1:24:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:43 PM","transactionId":1601990683182,"atmLocation":"Indonesia"}
+Oct 06, 2020 1:24:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"739759901","amount":591.3,"dateAndTime":"Oct 6, 2020 1:24:43 PM","transactionId":1601990683182}
+Oct 06, 2020 1:24:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"739759901","amount":636.35,"dateAndTime":"Oct 6, 2020 1:24:43 PM"}
+Oct 06, 2020 1:24:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 65476.53
+Oct 06, 2020 1:24:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:24:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:45 PM","transactionId":1601990685195,"atmLocation":"DR Congo"}
+Oct 06, 2020 1:24:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"485641801","amount":806.57,"dateAndTime":"Oct 6, 2020 1:24:45 PM","transactionId":1601990685195}
+Oct 06, 2020 1:24:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"485641801","amount":49.4,"dateAndTime":"Oct 6, 2020 1:24:45 PM"}
+Oct 06, 2020 1:24:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 10537.71
+Oct 06, 2020 1:24:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Togo
+Oct 06, 2020 1:24:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"267930056","amount":824.91,"dateAndTime":"Oct 6, 2020 1:24:47 PM"}
+Oct 06, 2020 1:24:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:47 PM","transactionId":1601990687201,"atmLocation":"Togo"}
+Oct 06, 2020 1:24:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"267930056","amount":105.29,"dateAndTime":"Oct 6, 2020 1:24:47 PM","transactionId":1601990687201}
+Oct 06, 2020 1:24:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 62094.1
+Oct 06, 2020 1:24:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Afghanistan
+Oct 06, 2020 1:24:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"726726878","amount":982.16,"dateAndTime":"Oct 6, 2020 1:24:49 PM"}
+Oct 06, 2020 1:24:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:49 PM","transactionId":1601990689208,"atmLocation":"Georgia"}
+Oct 06, 2020 1:24:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"726726878","amount":298.64,"dateAndTime":"Oct 6, 2020 1:24:49 PM","transactionId":1601990689208}
+Oct 06, 2020 1:24:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 49497.41
+Oct 06, 2020 1:24:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: DR Congo
+Oct 06, 2020 1:24:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"347192113","amount":856.7,"dateAndTime":"Oct 6, 2020 1:24:51 PM"}
+Oct 06, 2020 1:24:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:51 PM","transactionId":1601990691212,"atmLocation":"DR Congo"}
+Oct 06, 2020 1:24:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"347192113","amount":249.61,"dateAndTime":"Oct 6, 2020 1:24:51 PM","transactionId":1601990691212}
+Oct 06, 2020 1:24:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 32319.60
+Oct 06, 2020 1:24:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Georgia
+Oct 06, 2020 1:24:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"911811823","amount":50.11,"dateAndTime":"Oct 6, 2020 1:24:53 PM"}
+Oct 06, 2020 1:24:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:53 PM","transactionId":1601990693217,"atmLocation":"Georgia"}
+Oct 06, 2020 1:24:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"911811823","amount":11.71,"dateAndTime":"Oct 6, 2020 1:24:53 PM","transactionId":1601990693217}
+Oct 06, 2020 1:24:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 29441.42
+Oct 06, 2020 1:24:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: France
+Oct 06, 2020 1:24:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"472233268","amount":245.44,"dateAndTime":"Oct 6, 2020 1:24:55 PM"}
+Oct 06, 2020 1:24:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:55 PM","transactionId":1601990695218,"atmLocation":"Egypt"}
+Oct 06, 2020 1:24:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"472233268","amount":896.9,"dateAndTime":"Oct 6, 2020 1:24:55 PM","transactionId":1601990695218}
+Oct 06, 2020 1:24:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 99441.3
+Oct 06, 2020 1:24:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Argentina
+Oct 06, 2020 1:24:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"508265354","amount":44.49,"dateAndTime":"Oct 6, 2020 1:24:57 PM"}
+Oct 06, 2020 1:24:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:57 PM","transactionId":1601990697221,"atmLocation":"Argentina"}
+Oct 06, 2020 1:24:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"508265354","amount":503.64,"dateAndTime":"Oct 6, 2020 1:24:57 PM","transactionId":1601990697221}
+Oct 06, 2020 1:24:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 78545.42
+Oct 06, 2020 1:24:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Jordan
+Oct 06, 2020 1:24:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"875344779","amount":295.21,"dateAndTime":"Oct 6, 2020 1:24:59 PM"}
+Oct 06, 2020 1:24:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:24:59 PM","transactionId":1601990699222,"atmLocation":"Jordan"}
+Oct 06, 2020 1:24:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"875344779","amount":561.81,"dateAndTime":"Oct 6, 2020 1:24:59 PM","transactionId":1601990699222}
+Oct 06, 2020 1:25:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 57836.28
+Oct 06, 2020 1:25:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:25:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"906703802","amount":888.4,"dateAndTime":"Oct 6, 2020 1:25:01 PM"}
+Oct 06, 2020 1:25:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:01 PM","transactionId":1601990701223,"atmLocation":"Ivory Coast"}
+Oct 06, 2020 1:25:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"906703802","amount":441.58,"dateAndTime":"Oct 6, 2020 1:25:01 PM","transactionId":1601990701223}
+Oct 06, 2020 1:25:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 85135.48
+Oct 06, 2020 1:25:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Afghanistan
+Oct 06, 2020 1:25:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"155576996","amount":334.62,"dateAndTime":"Oct 6, 2020 1:25:03 PM"}
+Oct 06, 2020 1:25:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:03 PM","transactionId":1601990703226,"atmLocation":"Afghanistan"}
+Oct 06, 2020 1:25:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"155576996","amount":491.2,"dateAndTime":"Oct 6, 2020 1:25:03 PM","transactionId":1601990703226}
+Oct 06, 2020 1:25:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 13325.97
+Oct 06, 2020 1:25:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:25:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"226155962","amount":253.53,"dateAndTime":"Oct 6, 2020 1:25:05 PM"}
+Oct 06, 2020 1:25:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:05 PM","transactionId":1601990705227,"atmLocation":"Ukraine"}
+Oct 06, 2020 1:25:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"226155962","amount":882.59,"dateAndTime":"Oct 6, 2020 1:25:05 PM","transactionId":1601990705227}
+Oct 06, 2020 1:25:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 87648.53
+Oct 06, 2020 1:25:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Brazil
+Oct 06, 2020 1:25:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"949585961","amount":307.73,"dateAndTime":"Oct 6, 2020 1:25:07 PM"}
+Oct 06, 2020 1:25:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:07 PM","transactionId":1601990707232,"atmLocation":"Brazil"}
+Oct 06, 2020 1:25:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"949585961","amount":25.68,"dateAndTime":"Oct 6, 2020 1:25:07 PM","transactionId":1601990707232}
+Oct 06, 2020 1:25:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 34631.13
+Oct 06, 2020 1:25:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:25:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"640795653","amount":212.8,"dateAndTime":"Oct 6, 2020 1:25:09 PM"}
+Oct 06, 2020 1:25:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:09 PM","transactionId":1601990709236,"atmLocation":"Ivory Coast"}
+Oct 06, 2020 1:25:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"640795653","amount":851.7,"dateAndTime":"Oct 6, 2020 1:25:09 PM","transactionId":1601990709236}
+Oct 06, 2020 1:25:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 61529.3
+Oct 06, 2020 1:25:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Iraq
+Oct 06, 2020 1:25:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"470457781","amount":84.91,"dateAndTime":"Oct 6, 2020 1:25:11 PM"}
+Oct 06, 2020 1:25:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:11 PM","transactionId":1601990711237,"atmLocation":"Iraq"}
+Oct 06, 2020 1:25:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"470457781","amount":519.41,"dateAndTime":"Oct 6, 2020 1:25:11 PM","transactionId":1601990711237}
+Oct 06, 2020 1:25:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 54148.61
+Oct 06, 2020 1:25:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Canada
+Oct 06, 2020 1:25:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"353044431","amount":735.97,"dateAndTime":"Oct 6, 2020 1:25:13 PM"}
+Oct 06, 2020 1:25:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:13 PM","transactionId":1601990713238,"atmLocation":"Indonesia"}
+Oct 06, 2020 1:25:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"353044431","amount":554.46,"dateAndTime":"Oct 6, 2020 1:25:13 PM","transactionId":1601990713238}
+Oct 06, 2020 1:25:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 57242.60
+Oct 06, 2020 1:25:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: United Arab Emirates
+Oct 06, 2020 1:25:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"502154118","amount":107.71,"dateAndTime":"Oct 6, 2020 1:25:15 PM"}
+Oct 06, 2020 1:25:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:15 PM","transactionId":1601990715239,"atmLocation":"United Arab Emirates"}
+Oct 06, 2020 1:25:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"502154118","amount":130.45,"dateAndTime":"Oct 6, 2020 1:25:15 PM","transactionId":1601990715239}
+Oct 06, 2020 1:25:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 79247.91
+Oct 06, 2020 1:25:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Canada
+Oct 06, 2020 1:25:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"781049940","amount":143.28,"dateAndTime":"Oct 6, 2020 1:25:17 PM"}
+Oct 06, 2020 1:25:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:17 PM","transactionId":1601990717240,"atmLocation":"Canada"}
+Oct 06, 2020 1:25:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"781049940","amount":977.53,"dateAndTime":"Oct 6, 2020 1:25:17 PM","transactionId":1601990717240}
+Oct 06, 2020 1:25:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 98420.97
+Oct 06, 2020 1:25:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Thailand
+Oct 06, 2020 1:25:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"85903913","amount":530.13,"dateAndTime":"Oct 6, 2020 1:25:19 PM"}
+Oct 06, 2020 1:25:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:19 PM","transactionId":1601990719241,"atmLocation":"Thailand"}
+Oct 06, 2020 1:25:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"85903913","amount":421.43,"dateAndTime":"Oct 6, 2020 1:25:19 PM","transactionId":1601990719241}
+Oct 06, 2020 1:25:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 76806.84
+Oct 06, 2020 1:25:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ghana
+Oct 06, 2020 1:25:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"103397629","amount":624.46,"dateAndTime":"Oct 6, 2020 1:25:21 PM"}
+Oct 06, 2020 1:25:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:21 PM","transactionId":1601990721242,"atmLocation":"Ghana"}
+Oct 06, 2020 1:25:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"103397629","amount":689.26,"dateAndTime":"Oct 6, 2020 1:25:21 PM","transactionId":1601990721242}
+Oct 06, 2020 1:25:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 69057.94
+Oct 06, 2020 1:25:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: South Africa
+Oct 06, 2020 1:25:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"511440623","amount":40.37,"dateAndTime":"Oct 6, 2020 1:25:23 PM"}
+Oct 06, 2020 1:25:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:23 PM","transactionId":1601990723243,"atmLocation":"Togo"}
+Oct 06, 2020 1:25:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"511440623","amount":572.16,"dateAndTime":"Oct 6, 2020 1:25:23 PM","transactionId":1601990723243}
+Oct 06, 2020 1:25:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 91897.72
+Oct 06, 2020 1:25:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Nigeria
+Oct 06, 2020 1:25:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"764001205","amount":648.85,"dateAndTime":"Oct 6, 2020 1:25:25 PM"}
+Oct 06, 2020 1:25:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:25 PM","transactionId":1601990725244,"atmLocation":"Ghana"}
+Oct 06, 2020 1:25:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"764001205","amount":348.12,"dateAndTime":"Oct 6, 2020 1:25:25 PM","transactionId":1601990725244}
+Oct 06, 2020 1:25:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 71190.0
+Oct 06, 2020 1:25:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Indonesia
+Oct 06, 2020 1:25:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"102686209","amount":275.37,"dateAndTime":"Oct 6, 2020 1:25:27 PM"}
+Oct 06, 2020 1:25:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:27 PM","transactionId":1601990727248,"atmLocation":"Indonesia"}
+Oct 06, 2020 1:25:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"102686209","amount":227.88,"dateAndTime":"Oct 6, 2020 1:25:27 PM","transactionId":1601990727248}
+Oct 06, 2020 1:25:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 53391.56
+Oct 06, 2020 1:25:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Nigeria
+Oct 06, 2020 1:25:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"232822521","amount":515.67,"dateAndTime":"Oct 6, 2020 1:25:29 PM"}
+Oct 06, 2020 1:25:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:29 PM","transactionId":1601990729249,"atmLocation":"Nigeria"}
+Oct 06, 2020 1:25:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"232822521","amount":149.94,"dateAndTime":"Oct 6, 2020 1:25:29 PM","transactionId":1601990729249}
+Oct 06, 2020 1:25:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 68249.97
+Oct 06, 2020 1:25:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ukraine
+Oct 06, 2020 1:25:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"332845357","amount":66.4,"dateAndTime":"Oct 6, 2020 1:25:31 PM"}
+Oct 06, 2020 1:25:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:31 PM","transactionId":1601990731250,"atmLocation":"Ukraine"}
+Oct 06, 2020 1:25:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"332845357","amount":283.37,"dateAndTime":"Oct 6, 2020 1:25:31 PM","transactionId":1601990731250}
+Oct 06, 2020 1:25:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 20588.83
+Oct 06, 2020 1:25:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Uganda
+Oct 06, 2020 1:25:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"176333063","amount":969.22,"dateAndTime":"Oct 6, 2020 1:25:33 PM"}
+Oct 06, 2020 1:25:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:33 PM","transactionId":1601990733251,"atmLocation":"Uganda"}
+Oct 06, 2020 1:25:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"176333063","amount":805.1,"dateAndTime":"Oct 6, 2020 1:25:33 PM","transactionId":1601990733251}
+Oct 06, 2020 1:25:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 74286.33
+Oct 06, 2020 1:25:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Indonesia
+Oct 06, 2020 1:25:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"739759901","amount":794.7,"dateAndTime":"Oct 6, 2020 1:25:35 PM"}
+Oct 06, 2020 1:25:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:35 PM","transactionId":1601990735253,"atmLocation":"Indonesia"}
+Oct 06, 2020 1:25:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"739759901","amount":20.22,"dateAndTime":"Oct 6, 2020 1:25:35 PM","transactionId":1601990735253}
+Oct 06, 2020 1:25:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 99171.32
+Oct 06, 2020 1:25:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:25:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"485641801","amount":756.25,"dateAndTime":"Oct 6, 2020 1:25:37 PM"}
+Oct 06, 2020 1:25:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:37 PM","transactionId":1601990737254,"atmLocation":"United Arab Emirates"}
+Oct 06, 2020 1:25:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"485641801","amount":546.2,"dateAndTime":"Oct 6, 2020 1:25:37 PM","transactionId":1601990737254}
+Oct 06, 2020 1:25:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 85462.68
+Oct 06, 2020 1:25:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Togo
+Oct 06, 2020 1:25:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"267930056","amount":79.86,"dateAndTime":"Oct 6, 2020 1:25:39 PM"}
+Oct 06, 2020 1:25:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:39 PM","transactionId":1601990739258,"atmLocation":"Togo"}
+Oct 06, 2020 1:25:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"267930056","amount":634.76,"dateAndTime":"Oct 6, 2020 1:25:39 PM","transactionId":1601990739258}
+Oct 06, 2020 1:25:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 96369.76
+Oct 06, 2020 1:25:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Afghanistan
+Oct 06, 2020 1:25:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"726726878","amount":214.48,"dateAndTime":"Oct 6, 2020 1:25:41 PM"}
+Oct 06, 2020 1:25:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:41 PM","transactionId":1601990741259,"atmLocation":"Mexico"}
+Oct 06, 2020 1:25:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"726726878","amount":168.11,"dateAndTime":"Oct 6, 2020 1:25:41 PM","transactionId":1601990741259}
+Oct 06, 2020 1:25:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 749.17
+Oct 06, 2020 1:25:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: DR Congo
+Oct 06, 2020 1:25:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"347192113","amount":163.14,"dateAndTime":"Oct 6, 2020 1:25:43 PM"}
+Oct 06, 2020 1:25:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:43 PM","transactionId":1601990743260,"atmLocation":"DR Congo"}
+Oct 06, 2020 1:25:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"347192113","amount":628.85,"dateAndTime":"Oct 6, 2020 1:25:43 PM","transactionId":1601990743260}
+Oct 06, 2020 1:25:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 71261.76
+Oct 06, 2020 1:25:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Georgia
+Oct 06, 2020 1:25:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"911811823","amount":829.52,"dateAndTime":"Oct 6, 2020 1:25:45 PM"}
+Oct 06, 2020 1:25:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:45 PM","transactionId":1601990745261,"atmLocation":"Georgia"}
+Oct 06, 2020 1:25:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"911811823","amount":878.35,"dateAndTime":"Oct 6, 2020 1:25:45 PM","transactionId":1601990745261}
+Oct 06, 2020 1:25:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 64516.67
+Oct 06, 2020 1:25:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: France
+Oct 06, 2020 1:25:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"472233268","amount":676.12,"dateAndTime":"Oct 6, 2020 1:25:47 PM"}
+Oct 06, 2020 1:25:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:47 PM","transactionId":1601990747262,"atmLocation":"Brazil"}
+Oct 06, 2020 1:25:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"472233268","amount":868.87,"dateAndTime":"Oct 6, 2020 1:25:47 PM","transactionId":1601990747262}
+Oct 06, 2020 1:25:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 84640.72
+Oct 06, 2020 1:25:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Argentina
+Oct 06, 2020 1:25:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"508265354","amount":371.98,"dateAndTime":"Oct 6, 2020 1:25:49 PM"}
+Oct 06, 2020 1:25:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:49 PM","transactionId":1601990749263,"atmLocation":"Argentina"}
+Oct 06, 2020 1:25:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"508265354","amount":53.34,"dateAndTime":"Oct 6, 2020 1:25:49 PM","transactionId":1601990749263}
+Oct 06, 2020 1:25:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 87154.37
+Oct 06, 2020 1:25:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Jordan
+Oct 06, 2020 1:25:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"875344779","amount":372.75,"dateAndTime":"Oct 6, 2020 1:25:51 PM"}
+Oct 06, 2020 1:25:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:51 PM","transactionId":1601990751275,"atmLocation":"Jordan"}
+Oct 06, 2020 1:25:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"875344779","amount":896.1,"dateAndTime":"Oct 6, 2020 1:25:51 PM","transactionId":1601990751275}
+Oct 06, 2020 1:25:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 12182.33
+Oct 06, 2020 1:25:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:25:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"906703802","amount":625.75,"dateAndTime":"Oct 6, 2020 1:25:53 PM"}
+Oct 06, 2020 1:25:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:53 PM","transactionId":1601990753277,"atmLocation":"Ivory Coast"}
+Oct 06, 2020 1:25:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"906703802","amount":432.34,"dateAndTime":"Oct 6, 2020 1:25:53 PM","transactionId":1601990753277}
+Oct 06, 2020 1:25:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 50212.96
+Oct 06, 2020 1:25:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Afghanistan
+Oct 06, 2020 1:25:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"155576996","amount":677.96,"dateAndTime":"Oct 6, 2020 1:25:55 PM"}
+Oct 06, 2020 1:25:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:55 PM","transactionId":1601990755277,"atmLocation":"Afghanistan"}
+Oct 06, 2020 1:25:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"155576996","amount":163.96,"dateAndTime":"Oct 6, 2020 1:25:55 PM","transactionId":1601990755277}
+Oct 06, 2020 1:25:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 51331.0
+Oct 06, 2020 1:25:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:25:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"226155962","amount":427.62,"dateAndTime":"Oct 6, 2020 1:25:57 PM"}
+Oct 06, 2020 1:25:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:57 PM","transactionId":1601990757278,"atmLocation":"Uganda"}
+Oct 06, 2020 1:25:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"226155962","amount":787.22,"dateAndTime":"Oct 6, 2020 1:25:57 PM","transactionId":1601990757278}
+Oct 06, 2020 1:25:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 92560.95
+Oct 06, 2020 1:25:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Brazil
+Oct 06, 2020 1:25:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"949585961","amount":850.78,"dateAndTime":"Oct 6, 2020 1:25:59 PM"}
+Oct 06, 2020 1:25:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:25:59 PM","transactionId":1601990759280,"atmLocation":"Brazil"}
+Oct 06, 2020 1:25:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"949585961","amount":90.77,"dateAndTime":"Oct 6, 2020 1:25:59 PM","transactionId":1601990759280}
+Oct 06, 2020 1:26:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 43313.89
+Oct 06, 2020 1:26:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:26:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"640795653","amount":580.8,"dateAndTime":"Oct 6, 2020 1:26:01 PM"}
+Oct 06, 2020 1:26:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:01 PM","transactionId":1601990761281,"atmLocation":"Ivory Coast"}
+Oct 06, 2020 1:26:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"640795653","amount":631.9,"dateAndTime":"Oct 6, 2020 1:26:01 PM","transactionId":1601990761281}
+Oct 06, 2020 1:26:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 47352.25
+Oct 06, 2020 1:26:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Iraq
+Oct 06, 2020 1:26:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"470457781","amount":475.8,"dateAndTime":"Oct 6, 2020 1:26:03 PM"}
+Oct 06, 2020 1:26:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:03 PM","transactionId":1601990763282,"atmLocation":"Iraq"}
+Oct 06, 2020 1:26:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"470457781","amount":581.52,"dateAndTime":"Oct 6, 2020 1:26:03 PM","transactionId":1601990763282}
+Oct 06, 2020 1:26:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 99324.81
+Oct 06, 2020 1:26:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Canada
+Oct 06, 2020 1:26:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"353044431","amount":767.4,"dateAndTime":"Oct 6, 2020 1:26:05 PM"}
+Oct 06, 2020 1:26:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:05 PM","transactionId":1601990765283,"atmLocation":"Iraq"}
+Oct 06, 2020 1:26:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"353044431","amount":876.93,"dateAndTime":"Oct 6, 2020 1:26:05 PM","transactionId":1601990765283}
+Oct 06, 2020 1:26:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 70180.72
+Oct 06, 2020 1:26:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: United Arab Emirates
+Oct 06, 2020 1:26:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"502154118","amount":681.46,"dateAndTime":"Oct 6, 2020 1:26:07 PM"}
+Oct 06, 2020 1:26:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:07 PM","transactionId":1601990767284,"atmLocation":"United Arab Emirates"}
+Oct 06, 2020 1:26:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"502154118","amount":593.27,"dateAndTime":"Oct 6, 2020 1:26:07 PM","transactionId":1601990767284}
+Oct 06, 2020 1:26:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 18355.32
+Oct 06, 2020 1:26:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Canada
+Oct 06, 2020 1:26:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"781049940","amount":348.1,"dateAndTime":"Oct 6, 2020 1:26:09 PM"}
+Oct 06, 2020 1:26:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:09 PM","transactionId":1601990769285,"atmLocation":"Canada"}
+Oct 06, 2020 1:26:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"781049940","amount":570.32,"dateAndTime":"Oct 6, 2020 1:26:09 PM","transactionId":1601990769285}
+Oct 06, 2020 1:26:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 22599.29
+Oct 06, 2020 1:26:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Thailand
+Oct 06, 2020 1:26:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"85903913","amount":344.2,"dateAndTime":"Oct 6, 2020 1:26:11 PM"}
+Oct 06, 2020 1:26:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:11 PM","transactionId":1601990771286,"atmLocation":"Thailand"}
+Oct 06, 2020 1:26:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"85903913","amount":843.52,"dateAndTime":"Oct 6, 2020 1:26:11 PM","transactionId":1601990771286}
+Oct 06, 2020 1:26:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 39063.27
+Oct 06, 2020 1:26:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ghana
+Oct 06, 2020 1:26:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"103397629","amount":870.51,"dateAndTime":"Oct 6, 2020 1:26:13 PM"}
+Oct 06, 2020 1:26:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:13 PM","transactionId":1601990773287,"atmLocation":"Ghana"}
+Oct 06, 2020 1:26:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"103397629","amount":440.8,"dateAndTime":"Oct 6, 2020 1:26:13 PM","transactionId":1601990773287}
+Oct 06, 2020 1:26:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 99849.0
+Oct 06, 2020 1:26:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: South Africa
+Oct 06, 2020 1:26:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"511440623","amount":375.82,"dateAndTime":"Oct 6, 2020 1:26:15 PM"}
+Oct 06, 2020 1:26:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:15 PM","transactionId":1601990775299,"atmLocation":"Phillipines"}
+Oct 06, 2020 1:26:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"511440623","amount":748.3,"dateAndTime":"Oct 6, 2020 1:26:15 PM","transactionId":1601990775299}
+Oct 06, 2020 1:26:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 51987.28
+Oct 06, 2020 1:26:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Nigeria
+Oct 06, 2020 1:26:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"764001205","amount":317.97,"dateAndTime":"Oct 6, 2020 1:26:17 PM"}
+Oct 06, 2020 1:26:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:17 PM","transactionId":1601990777301,"atmLocation":"New Mexico"}
+Oct 06, 2020 1:26:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"764001205","amount":158.79,"dateAndTime":"Oct 6, 2020 1:26:17 PM","transactionId":1601990777301}
+Oct 06, 2020 1:26:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 25941.97
+Oct 06, 2020 1:26:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Indonesia
+Oct 06, 2020 1:26:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"102686209","amount":611.43,"dateAndTime":"Oct 6, 2020 1:26:19 PM"}
+Oct 06, 2020 1:26:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:19 PM","transactionId":1601990779302,"atmLocation":"Indonesia"}
+Oct 06, 2020 1:26:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"102686209","amount":233.56,"dateAndTime":"Oct 6, 2020 1:26:19 PM","transactionId":1601990779302}
+Oct 06, 2020 1:26:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 58468.37
+Oct 06, 2020 1:26:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Nigeria
+Oct 06, 2020 1:26:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"232822521","amount":894.38,"dateAndTime":"Oct 6, 2020 1:26:21 PM"}
+Oct 06, 2020 1:26:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:21 PM","transactionId":1601990781303,"atmLocation":"Nigeria"}
+Oct 06, 2020 1:26:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"232822521","amount":511.79,"dateAndTime":"Oct 6, 2020 1:26:21 PM","transactionId":1601990781303}
+Oct 06, 2020 1:26:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 11565.61
+Oct 06, 2020 1:26:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ukraine
+Oct 06, 2020 1:26:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"332845357","amount":372.11,"dateAndTime":"Oct 6, 2020 1:26:23 PM"}
+Oct 06, 2020 1:26:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:23 PM","transactionId":1601990783306,"atmLocation":"Ukraine"}
+Oct 06, 2020 1:26:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"332845357","amount":575.72,"dateAndTime":"Oct 6, 2020 1:26:23 PM","transactionId":1601990783306}
+Oct 06, 2020 1:26:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 10601.90
+Oct 06, 2020 1:26:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Uganda
+Oct 06, 2020 1:26:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"176333063","amount":193.57,"dateAndTime":"Oct 6, 2020 1:26:25 PM"}
+Oct 06, 2020 1:26:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:25 PM","transactionId":1601990785307,"atmLocation":"Uganda"}
+Oct 06, 2020 1:26:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"176333063","amount":326.47,"dateAndTime":"Oct 6, 2020 1:26:25 PM","transactionId":1601990785307}
+Oct 06, 2020 1:26:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 25228.47
+Oct 06, 2020 1:26:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Indonesia
+Oct 06, 2020 1:26:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"739759901","amount":243.95,"dateAndTime":"Oct 6, 2020 1:26:27 PM"}
+Oct 06, 2020 1:26:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:27 PM","transactionId":1601990787308,"atmLocation":"Indonesia"}
+Oct 06, 2020 1:26:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"739759901","amount":64.86,"dateAndTime":"Oct 6, 2020 1:26:27 PM","transactionId":1601990787308}
+Oct 06, 2020 1:26:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 83877.22
+Oct 06, 2020 1:26:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:26:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"485641801","amount":217.97,"dateAndTime":"Oct 6, 2020 1:26:29 PM"}
+Oct 06, 2020 1:26:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:29 PM","transactionId":1601990789309,"atmLocation":"France"}
+Oct 06, 2020 1:26:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"485641801","amount":233.64,"dateAndTime":"Oct 6, 2020 1:26:29 PM","transactionId":1601990789309}
+Oct 06, 2020 1:26:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 86413.64
+Oct 06, 2020 1:26:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Togo
+Oct 06, 2020 1:26:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"267930056","amount":837.23,"dateAndTime":"Oct 6, 2020 1:26:31 PM"}
+Oct 06, 2020 1:26:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:31 PM","transactionId":1601990791312,"atmLocation":"Togo"}
+Oct 06, 2020 1:26:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"267930056","amount":412.7,"dateAndTime":"Oct 6, 2020 1:26:31 PM","transactionId":1601990791312}
+Oct 06, 2020 1:26:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 59052.71
+Oct 06, 2020 1:26:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Afghanistan
+Oct 06, 2020 1:26:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"726726878","amount":462.87,"dateAndTime":"Oct 6, 2020 1:26:33 PM"}
+Oct 06, 2020 1:26:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:33 PM","transactionId":1601990793313,"atmLocation":"Togo"}
+Oct 06, 2020 1:26:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"726726878","amount":921.6,"dateAndTime":"Oct 6, 2020 1:26:33 PM","transactionId":1601990793313}
+Oct 06, 2020 1:26:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 41979.23
+Oct 06, 2020 1:26:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: DR Congo
+Oct 06, 2020 1:26:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"347192113","amount":519.6,"dateAndTime":"Oct 6, 2020 1:26:35 PM"}
+Oct 06, 2020 1:26:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:35 PM","transactionId":1601990795315,"atmLocation":"DR Congo"}
+Oct 06, 2020 1:26:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"347192113","amount":98.1,"dateAndTime":"Oct 6, 2020 1:26:35 PM","transactionId":1601990795315}
+Oct 06, 2020 1:26:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 20440.8
+Oct 06, 2020 1:26:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Georgia
+Oct 06, 2020 1:26:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"911811823","amount":833.5,"dateAndTime":"Oct 6, 2020 1:26:37 PM"}
+Oct 06, 2020 1:26:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:37 PM","transactionId":1601990797315,"atmLocation":"Georgia"}
+Oct 06, 2020 1:26:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"911811823","amount":507.93,"dateAndTime":"Oct 6, 2020 1:26:37 PM","transactionId":1601990797315}
+Oct 06, 2020 1:26:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 92955.62
+Oct 06, 2020 1:26:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: France
+Oct 06, 2020 1:26:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"472233268","amount":476.46,"dateAndTime":"Oct 6, 2020 1:26:39 PM"}
+Oct 06, 2020 1:26:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:39 PM","transactionId":1601990799317,"atmLocation":"Chile"}
+Oct 06, 2020 1:26:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"472233268","amount":15.66,"dateAndTime":"Oct 6, 2020 1:26:39 PM","transactionId":1601990799317}
+Oct 06, 2020 1:26:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 46516.6
+Oct 06, 2020 1:26:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Argentina
+Oct 06, 2020 1:26:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"508265354","amount":890.9,"dateAndTime":"Oct 6, 2020 1:26:41 PM"}
+Oct 06, 2020 1:26:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:41 PM","transactionId":1601990801318,"atmLocation":"Argentina"}
+Oct 06, 2020 1:26:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"508265354","amount":616.67,"dateAndTime":"Oct 6, 2020 1:26:41 PM","transactionId":1601990801318}
+Oct 06, 2020 1:26:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 80649.0
+Oct 06, 2020 1:26:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Jordan
+Oct 06, 2020 1:26:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"875344779","amount":237.53,"dateAndTime":"Oct 6, 2020 1:26:43 PM"}
+Oct 06, 2020 1:26:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:43 PM","transactionId":1601990803319,"atmLocation":"Jordan"}
+Oct 06, 2020 1:26:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"875344779","amount":123.41,"dateAndTime":"Oct 6, 2020 1:26:43 PM","transactionId":1601990803319}
+Oct 06, 2020 1:26:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 24010.66
+Oct 06, 2020 1:26:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:26:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"906703802","amount":154.94,"dateAndTime":"Oct 6, 2020 1:26:45 PM"}
+Oct 06, 2020 1:26:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:45 PM","transactionId":1601990805320,"atmLocation":"Ivory Coast"}
+Oct 06, 2020 1:26:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"906703802","amount":730.92,"dateAndTime":"Oct 6, 2020 1:26:45 PM","transactionId":1601990805320}
+Oct 06, 2020 1:26:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 18920.53
+Oct 06, 2020 1:26:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Afghanistan
+Oct 06, 2020 1:26:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"155576996","amount":504.91,"dateAndTime":"Oct 6, 2020 1:26:47 PM"}
+Oct 06, 2020 1:26:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:47 PM","transactionId":1601990807320,"atmLocation":"Afghanistan"}
+Oct 06, 2020 1:26:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"155576996","amount":788.93,"dateAndTime":"Oct 6, 2020 1:26:47 PM","transactionId":1601990807320}
+Oct 06, 2020 1:26:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 75504.1
+Oct 06, 2020 1:26:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:26:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"226155962","amount":4.38,"dateAndTime":"Oct 6, 2020 1:26:49 PM"}
+Oct 06, 2020 1:26:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:49 PM","transactionId":1601990809321,"atmLocation":"Ivory Coast"}
+Oct 06, 2020 1:26:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"226155962","amount":877.5,"dateAndTime":"Oct 6, 2020 1:26:49 PM","transactionId":1601990809321}
+Oct 06, 2020 1:26:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 96342.46
+Oct 06, 2020 1:26:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Brazil
+Oct 06, 2020 1:26:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"949585961","amount":582.18,"dateAndTime":"Oct 6, 2020 1:26:51 PM"}
+Oct 06, 2020 1:26:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:51 PM","transactionId":1601990811322,"atmLocation":"Brazil"}
+Oct 06, 2020 1:26:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"949585961","amount":372.26,"dateAndTime":"Oct 6, 2020 1:26:51 PM","transactionId":1601990811322}
+Oct 06, 2020 1:26:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 98586.51
+Oct 06, 2020 1:26:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:26:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"640795653","amount":253.69,"dateAndTime":"Oct 6, 2020 1:26:53 PM"}
+Oct 06, 2020 1:26:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:53 PM","transactionId":1601990813323,"atmLocation":"Ivory Coast"}
+Oct 06, 2020 1:26:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"640795653","amount":523.74,"dateAndTime":"Oct 6, 2020 1:26:53 PM","transactionId":1601990813323}
+Oct 06, 2020 1:26:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 89634.74
+Oct 06, 2020 1:26:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Iraq
+Oct 06, 2020 1:26:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"470457781","amount":660.63,"dateAndTime":"Oct 6, 2020 1:26:55 PM"}
+Oct 06, 2020 1:26:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:55 PM","transactionId":1601990815324,"atmLocation":"Iraq"}
+Oct 06, 2020 1:26:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"470457781","amount":136.47,"dateAndTime":"Oct 6, 2020 1:26:55 PM","transactionId":1601990815324}
+Oct 06, 2020 1:26:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 24983.38
+Oct 06, 2020 1:26:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Canada
+Oct 06, 2020 1:26:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"353044431","amount":938.77,"dateAndTime":"Oct 6, 2020 1:26:57 PM"}
+Oct 06, 2020 1:26:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:57 PM","transactionId":1601990817326,"atmLocation":"Togo"}
+Oct 06, 2020 1:26:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"353044431","amount":420.43,"dateAndTime":"Oct 6, 2020 1:26:57 PM","transactionId":1601990817326}
+Oct 06, 2020 1:26:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 72725.58
+Oct 06, 2020 1:26:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: United Arab Emirates
+Oct 06, 2020 1:26:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"502154118","amount":951.76,"dateAndTime":"Oct 6, 2020 1:26:59 PM"}
+Oct 06, 2020 1:26:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:26:59 PM","transactionId":1601990819327,"atmLocation":"United Arab Emirates"}
+Oct 06, 2020 1:26:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"502154118","amount":387.52,"dateAndTime":"Oct 6, 2020 1:26:59 PM","transactionId":1601990819327}
+Oct 06, 2020 1:27:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 49328.21
+Oct 06, 2020 1:27:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Canada
+Oct 06, 2020 1:27:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"781049940","amount":682.76,"dateAndTime":"Oct 6, 2020 1:27:01 PM"}
+Oct 06, 2020 1:27:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:01 PM","transactionId":1601990821328,"atmLocation":"Canada"}
+Oct 06, 2020 1:27:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"781049940","amount":836.96,"dateAndTime":"Oct 6, 2020 1:27:01 PM","transactionId":1601990821328}
+Oct 06, 2020 1:27:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 8740.65
+Oct 06, 2020 1:27:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Thailand
+Oct 06, 2020 1:27:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"85903913","amount":494.4,"dateAndTime":"Oct 6, 2020 1:27:03 PM"}
+Oct 06, 2020 1:27:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:03 PM","transactionId":1601990823329,"atmLocation":"Thailand"}
+Oct 06, 2020 1:27:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"85903913","amount":141.0,"dateAndTime":"Oct 6, 2020 1:27:03 PM","transactionId":1601990823329}
+Oct 06, 2020 1:27:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 36264.98
+Oct 06, 2020 1:27:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ghana
+Oct 06, 2020 1:27:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"103397629","amount":800.8,"dateAndTime":"Oct 6, 2020 1:27:05 PM"}
+Oct 06, 2020 1:27:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:05 PM","transactionId":1601990825330,"atmLocation":"Ghana"}
+Oct 06, 2020 1:27:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"103397629","amount":320.66,"dateAndTime":"Oct 6, 2020 1:27:05 PM","transactionId":1601990825330}
+Oct 06, 2020 1:27:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 49738.73
+Oct 06, 2020 1:27:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: South Africa
+Oct 06, 2020 1:27:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"511440623","amount":313.18,"dateAndTime":"Oct 6, 2020 1:27:07 PM"}
+Oct 06, 2020 1:27:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:07 PM","transactionId":1601990827330,"atmLocation":"India"}
+Oct 06, 2020 1:27:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"511440623","amount":155.97,"dateAndTime":"Oct 6, 2020 1:27:07 PM","transactionId":1601990827330}
+Oct 06, 2020 1:27:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 72730.96
+Oct 06, 2020 1:27:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Nigeria
+Oct 06, 2020 1:27:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"764001205","amount":341.63,"dateAndTime":"Oct 6, 2020 1:27:09 PM"}
+Oct 06, 2020 1:27:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:09 PM","transactionId":1601990829332,"atmLocation":"Australia"}
+Oct 06, 2020 1:27:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"764001205","amount":679.1,"dateAndTime":"Oct 6, 2020 1:27:09 PM","transactionId":1601990829332}
+Oct 06, 2020 1:27:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 72563.57
+Oct 06, 2020 1:27:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Indonesia
+Oct 06, 2020 1:27:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"102686209","amount":940.17,"dateAndTime":"Oct 6, 2020 1:27:11 PM"}
+Oct 06, 2020 1:27:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:11 PM","transactionId":1601990831333,"atmLocation":"Indonesia"}
+Oct 06, 2020 1:27:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"102686209","amount":164.4,"dateAndTime":"Oct 6, 2020 1:27:11 PM","transactionId":1601990831333}
+Oct 06, 2020 1:27:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 22956.95
+Oct 06, 2020 1:27:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Nigeria
+Oct 06, 2020 1:27:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"232822521","amount":398.68,"dateAndTime":"Oct 6, 2020 1:27:13 PM"}
+Oct 06, 2020 1:27:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:13 PM","transactionId":1601990833334,"atmLocation":"Nigeria"}
+Oct 06, 2020 1:27:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"232822521","amount":15.27,"dateAndTime":"Oct 6, 2020 1:27:13 PM","transactionId":1601990833334}
+Oct 06, 2020 1:27:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 24771.29
+Oct 06, 2020 1:27:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ukraine
+Oct 06, 2020 1:27:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"332845357","amount":325.64,"dateAndTime":"Oct 6, 2020 1:27:15 PM"}
+Oct 06, 2020 1:27:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:15 PM","transactionId":1601990835334,"atmLocation":"Ukraine"}
+Oct 06, 2020 1:27:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"332845357","amount":339.16,"dateAndTime":"Oct 6, 2020 1:27:15 PM","transactionId":1601990835334}
+Oct 06, 2020 1:27:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 45155.17
+Oct 06, 2020 1:27:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Uganda
+Oct 06, 2020 1:27:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"176333063","amount":414.53,"dateAndTime":"Oct 6, 2020 1:27:17 PM"}
+Oct 06, 2020 1:27:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:17 PM","transactionId":1601990837335,"atmLocation":"Uganda"}
+Oct 06, 2020 1:27:17 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"176333063","amount":713.41,"dateAndTime":"Oct 6, 2020 1:27:17 PM","transactionId":1601990837335}
+Oct 06, 2020 1:27:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 98046.91
+Oct 06, 2020 1:27:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Indonesia
+Oct 06, 2020 1:27:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"739759901","amount":710.27,"dateAndTime":"Oct 6, 2020 1:27:19 PM"}
+Oct 06, 2020 1:27:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:19 PM","transactionId":1601990839337,"atmLocation":"Indonesia"}
+Oct 06, 2020 1:27:19 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"739759901","amount":546.87,"dateAndTime":"Oct 6, 2020 1:27:19 PM","transactionId":1601990839337}
+Oct 06, 2020 1:27:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 11100.22
+Oct 06, 2020 1:27:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:27:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"485641801","amount":797.7,"dateAndTime":"Oct 6, 2020 1:27:21 PM"}
+Oct 06, 2020 1:27:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:21 PM","transactionId":1601990841338,"atmLocation":"New Zealand"}
+Oct 06, 2020 1:27:21 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"485641801","amount":382.8,"dateAndTime":"Oct 6, 2020 1:27:21 PM","transactionId":1601990841338}
+Oct 06, 2020 1:27:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 89818.74
+Oct 06, 2020 1:27:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Togo
+Oct 06, 2020 1:27:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"267930056","amount":600.19,"dateAndTime":"Oct 6, 2020 1:27:23 PM"}
+Oct 06, 2020 1:27:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:23 PM","transactionId":1601990843339,"atmLocation":"Togo"}
+Oct 06, 2020 1:27:23 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"267930056","amount":92.31,"dateAndTime":"Oct 6, 2020 1:27:23 PM","transactionId":1601990843339}
+Oct 06, 2020 1:27:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 84337.88
+Oct 06, 2020 1:27:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Afghanistan
+Oct 06, 2020 1:27:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"726726878","amount":101.96,"dateAndTime":"Oct 6, 2020 1:27:25 PM"}
+Oct 06, 2020 1:27:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:25 PM","transactionId":1601990845340,"atmLocation":"New Zealand"}
+Oct 06, 2020 1:27:25 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"726726878","amount":540.95,"dateAndTime":"Oct 6, 2020 1:27:25 PM","transactionId":1601990845340}
+Oct 06, 2020 1:27:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 86830.29
+Oct 06, 2020 1:27:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: DR Congo
+Oct 06, 2020 1:27:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"347192113","amount":57.96,"dateAndTime":"Oct 6, 2020 1:27:27 PM"}
+Oct 06, 2020 1:27:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:27 PM","transactionId":1601990847341,"atmLocation":"DR Congo"}
+Oct 06, 2020 1:27:27 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"347192113","amount":271.21,"dateAndTime":"Oct 6, 2020 1:27:27 PM","transactionId":1601990847341}
+Oct 06, 2020 1:27:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 28479.21
+Oct 06, 2020 1:27:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Georgia
+Oct 06, 2020 1:27:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"911811823","amount":243.96,"dateAndTime":"Oct 6, 2020 1:27:29 PM"}
+Oct 06, 2020 1:27:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:29 PM","transactionId":1601990849341,"atmLocation":"Georgia"}
+Oct 06, 2020 1:27:29 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"911811823","amount":678.32,"dateAndTime":"Oct 6, 2020 1:27:29 PM","transactionId":1601990849341}
+Oct 06, 2020 1:27:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 43173.71
+Oct 06, 2020 1:27:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: France
+Oct 06, 2020 1:27:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"472233268","amount":933.68,"dateAndTime":"Oct 6, 2020 1:27:31 PM"}
+Oct 06, 2020 1:27:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:31 PM","transactionId":1601990851342,"atmLocation":"Georgia"}
+Oct 06, 2020 1:27:31 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"472233268","amount":109.1,"dateAndTime":"Oct 6, 2020 1:27:31 PM","transactionId":1601990851342}
+Oct 06, 2020 1:27:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 30640.73
+Oct 06, 2020 1:27:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Argentina
+Oct 06, 2020 1:27:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"508265354","amount":553.77,"dateAndTime":"Oct 6, 2020 1:27:33 PM"}
+Oct 06, 2020 1:27:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:33 PM","transactionId":1601990853348,"atmLocation":"Argentina"}
+Oct 06, 2020 1:27:33 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"508265354","amount":213.3,"dateAndTime":"Oct 6, 2020 1:27:33 PM","transactionId":1601990853348}
+Oct 06, 2020 1:27:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 57594.57
+Oct 06, 2020 1:27:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Jordan
+Oct 06, 2020 1:27:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"875344779","amount":514.19,"dateAndTime":"Oct 6, 2020 1:27:35 PM"}
+Oct 06, 2020 1:27:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:35 PM","transactionId":1601990855348,"atmLocation":"Jordan"}
+Oct 06, 2020 1:27:35 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"875344779","amount":734.12,"dateAndTime":"Oct 6, 2020 1:27:35 PM","transactionId":1601990855348}
+Oct 06, 2020 1:27:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 245.59
+Oct 06, 2020 1:27:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:27:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"906703802","amount":560.23,"dateAndTime":"Oct 6, 2020 1:27:37 PM"}
+Oct 06, 2020 1:27:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:37 PM","transactionId":1601990857349,"atmLocation":"Ivory Coast"}
+Oct 06, 2020 1:27:37 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"906703802","amount":672.1,"dateAndTime":"Oct 6, 2020 1:27:37 PM","transactionId":1601990857349}
+Oct 06, 2020 1:27:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 70299.19
+Oct 06, 2020 1:27:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Afghanistan
+Oct 06, 2020 1:27:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"155576996","amount":427.61,"dateAndTime":"Oct 6, 2020 1:27:39 PM"}
+Oct 06, 2020 1:27:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:39 PM","transactionId":1601990859350,"atmLocation":"Afghanistan"}
+Oct 06, 2020 1:27:39 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"155576996","amount":351.71,"dateAndTime":"Oct 6, 2020 1:27:39 PM","transactionId":1601990859350}
+Oct 06, 2020 1:27:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 11101.18
+Oct 06, 2020 1:27:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:27:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"226155962","amount":87.69,"dateAndTime":"Oct 6, 2020 1:27:41 PM"}
+Oct 06, 2020 1:27:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:41 PM","transactionId":1601990861351,"atmLocation":"Iraq"}
+Oct 06, 2020 1:27:41 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"226155962","amount":561.33,"dateAndTime":"Oct 6, 2020 1:27:41 PM","transactionId":1601990861351}
+Oct 06, 2020 1:27:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 31202.96
+Oct 06, 2020 1:27:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Brazil
+Oct 06, 2020 1:27:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"949585961","amount":404.15,"dateAndTime":"Oct 6, 2020 1:27:43 PM"}
+Oct 06, 2020 1:27:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:43 PM","transactionId":1601990863352,"atmLocation":"Brazil"}
+Oct 06, 2020 1:27:43 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"949585961","amount":619.13,"dateAndTime":"Oct 6, 2020 1:27:43 PM","transactionId":1601990863352}
+Oct 06, 2020 1:27:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 16368.73
+Oct 06, 2020 1:27:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:27:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"640795653","amount":369.87,"dateAndTime":"Oct 6, 2020 1:27:45 PM"}
+Oct 06, 2020 1:27:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:45 PM","transactionId":1601990865353,"atmLocation":"Ivory Coast"}
+Oct 06, 2020 1:27:45 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"640795653","amount":855.72,"dateAndTime":"Oct 6, 2020 1:27:45 PM","transactionId":1601990865353}
+Oct 06, 2020 1:27:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 86712.22
+Oct 06, 2020 1:27:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Iraq
+Oct 06, 2020 1:27:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"470457781","amount":242.14,"dateAndTime":"Oct 6, 2020 1:27:47 PM"}
+Oct 06, 2020 1:27:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:47 PM","transactionId":1601990867354,"atmLocation":"Iraq"}
+Oct 06, 2020 1:27:47 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"470457781","amount":420.43,"dateAndTime":"Oct 6, 2020 1:27:47 PM","transactionId":1601990867354}
+Oct 06, 2020 1:27:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 62134.77
+Oct 06, 2020 1:27:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Canada
+Oct 06, 2020 1:27:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"353044431","amount":401.57,"dateAndTime":"Oct 6, 2020 1:27:49 PM"}
+Oct 06, 2020 1:27:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:49 PM","transactionId":1601990869355,"atmLocation":"United Arab Emirates"}
+Oct 06, 2020 1:27:49 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"353044431","amount":794.93,"dateAndTime":"Oct 6, 2020 1:27:49 PM","transactionId":1601990869355}
+Oct 06, 2020 1:27:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 64880.8
+Oct 06, 2020 1:27:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: United Arab Emirates
+Oct 06, 2020 1:27:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"502154118","amount":659.47,"dateAndTime":"Oct 6, 2020 1:27:51 PM"}
+Oct 06, 2020 1:27:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:51 PM","transactionId":1601990871356,"atmLocation":"United Arab Emirates"}
+Oct 06, 2020 1:27:51 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"502154118","amount":650.68,"dateAndTime":"Oct 6, 2020 1:27:51 PM","transactionId":1601990871356}
+Oct 06, 2020 1:27:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 80178.52
+Oct 06, 2020 1:27:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Canada
+Oct 06, 2020 1:27:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"781049940","amount":64.21,"dateAndTime":"Oct 6, 2020 1:27:53 PM"}
+Oct 06, 2020 1:27:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:53 PM","transactionId":1601990873357,"atmLocation":"Canada"}
+Oct 06, 2020 1:27:53 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"781049940","amount":768.73,"dateAndTime":"Oct 6, 2020 1:27:53 PM","transactionId":1601990873357}
+Oct 06, 2020 1:27:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 42101.66
+Oct 06, 2020 1:27:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Thailand
+Oct 06, 2020 1:27:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"85903913","amount":422.43,"dateAndTime":"Oct 6, 2020 1:27:55 PM"}
+Oct 06, 2020 1:27:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:55 PM","transactionId":1601990875358,"atmLocation":"Thailand"}
+Oct 06, 2020 1:27:55 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"85903913","amount":714.56,"dateAndTime":"Oct 6, 2020 1:27:55 PM","transactionId":1601990875358}
+Oct 06, 2020 1:27:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 15994.4
+Oct 06, 2020 1:27:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ghana
+Oct 06, 2020 1:27:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"103397629","amount":882.97,"dateAndTime":"Oct 6, 2020 1:27:57 PM"}
+Oct 06, 2020 1:27:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:57 PM","transactionId":1601990877359,"atmLocation":"Ghana"}
+Oct 06, 2020 1:27:57 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"103397629","amount":297.39,"dateAndTime":"Oct 6, 2020 1:27:57 PM","transactionId":1601990877359}
+Oct 06, 2020 1:27:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 69524.0
+Oct 06, 2020 1:27:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: South Africa
+Oct 06, 2020 1:27:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"511440623","amount":350.88,"dateAndTime":"Oct 6, 2020 1:27:59 PM"}
+Oct 06, 2020 1:27:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:27:59 PM","transactionId":1601990879360,"atmLocation":"Canada"}
+Oct 06, 2020 1:27:59 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"511440623","amount":481.75,"dateAndTime":"Oct 6, 2020 1:27:59 PM","transactionId":1601990879360}
+Oct 06, 2020 1:28:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 68358.89
+Oct 06, 2020 1:28:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Nigeria
+Oct 06, 2020 1:28:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"764001205","amount":915.9,"dateAndTime":"Oct 6, 2020 1:28:01 PM"}
+Oct 06, 2020 1:28:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:28:01 PM","transactionId":1601990881360,"atmLocation":"Phillipines"}
+Oct 06, 2020 1:28:01 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"764001205","amount":117.51,"dateAndTime":"Oct 6, 2020 1:28:01 PM","transactionId":1601990881360}
+Oct 06, 2020 1:28:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 38530.25
+Oct 06, 2020 1:28:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Indonesia
+Oct 06, 2020 1:28:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"102686209","amount":592.19,"dateAndTime":"Oct 6, 2020 1:28:03 PM"}
+Oct 06, 2020 1:28:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:28:03 PM","transactionId":1601990883366,"atmLocation":"Indonesia"}
+Oct 06, 2020 1:28:03 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"102686209","amount":947.3,"dateAndTime":"Oct 6, 2020 1:28:03 PM","transactionId":1601990883366}
+Oct 06, 2020 1:28:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 68247.60
+Oct 06, 2020 1:28:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Nigeria
+Oct 06, 2020 1:28:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"232822521","amount":740.7,"dateAndTime":"Oct 6, 2020 1:28:05 PM"}
+Oct 06, 2020 1:28:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:28:05 PM","transactionId":1601990885367,"atmLocation":"Nigeria"}
+Oct 06, 2020 1:28:05 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"232822521","amount":968.8,"dateAndTime":"Oct 6, 2020 1:28:05 PM","transactionId":1601990885367}
+Oct 06, 2020 1:28:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 5054.54
+Oct 06, 2020 1:28:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ukraine
+Oct 06, 2020 1:28:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"332845357","amount":634.86,"dateAndTime":"Oct 6, 2020 1:28:07 PM"}
+Oct 06, 2020 1:28:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:28:07 PM","transactionId":1601990887368,"atmLocation":"Ukraine"}
+Oct 06, 2020 1:28:07 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"332845357","amount":26.43,"dateAndTime":"Oct 6, 2020 1:28:07 PM","transactionId":1601990887368}
+Oct 06, 2020 1:28:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 54673.75
+Oct 06, 2020 1:28:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Uganda
+Oct 06, 2020 1:28:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"176333063","amount":786.18,"dateAndTime":"Oct 6, 2020 1:28:09 PM"}
+Oct 06, 2020 1:28:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:28:09 PM","transactionId":1601990889369,"atmLocation":"Uganda"}
+Oct 06, 2020 1:28:09 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"176333063","amount":852.72,"dateAndTime":"Oct 6, 2020 1:28:09 PM","transactionId":1601990889369}
+Oct 06, 2020 1:28:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 27044.74
+Oct 06, 2020 1:28:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Indonesia
+Oct 06, 2020 1:28:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"739759901","amount":640.37,"dateAndTime":"Oct 6, 2020 1:28:11 PM"}
+Oct 06, 2020 1:28:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:28:11 PM","transactionId":1601990891370,"atmLocation":"Indonesia"}
+Oct 06, 2020 1:28:11 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"739759901","amount":506.1,"dateAndTime":"Oct 6, 2020 1:28:11 PM","transactionId":1601990891370}
+Oct 06, 2020 1:28:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 4413.83
+Oct 06, 2020 1:28:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Ivory Coast
+Oct 06, 2020 1:28:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"485641801","amount":900.6,"dateAndTime":"Oct 6, 2020 1:28:13 PM"}
+Oct 06, 2020 1:28:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:28:13 PM","transactionId":1601990893370,"atmLocation":"Indonesia"}
+Oct 06, 2020 1:28:13 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"485641801","amount":736.33,"dateAndTime":"Oct 6, 2020 1:28:13 PM","transactionId":1601990893370}
+Oct 06, 2020 1:28:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: balance-updates message: 74670.77
+Oct 06, 2020 1:28:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-visits message: Togo
+Oct 06, 2020 1:28:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-deposits message: {"accountNumber":"267930056","amount":919.38,"dateAndTime":"Oct 6, 2020 1:28:15 PM"}
+Oct 06, 2020 1:28:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: atm-withdrawals message: {"transactionDate":"Oct 6, 2020 1:28:15 PM","transactionId":1601990895371,"atmLocation":"Togo"}
+Oct 06, 2020 1:28:15 PM com.getsimplex.steptimer.service.KafkaKeyValueTopicProducerActor onReceive
+INFO: Sending to Kafka Topic: bank-withdrawals message: {"accountNumber":"267930056","amount":62.85,"dateAndTime":"Oct 6, 2020 1:28:15 PM","transactionId":1601990895371}

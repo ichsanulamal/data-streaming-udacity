@@ -1,0 +1,37 @@
+42:C 20 Jun 2025 02:19:00.054 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+42:C 20 Jun 2025 02:19:00.054 # Redis version=6.0.6, bits=64, commit=00000000, modified=0, pid=42, just started
+42:C 20 Jun 2025 02:19:00.054 # Configuration loaded
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 6.0.6 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+ |    `-._   `._    /     _.-'    |     PID: 42
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+42:M 20 Jun 2025 02:19:00.101 # Server initialized
+42:M 20 Jun 2025 02:19:00.101 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+42:M 20 Jun 2025 02:19:00.102 * Loading RDB produced by version 6.0.6
+42:M 20 Jun 2025 02:19:00.102 * RDB age 143369554 seconds
+42:M 20 Jun 2025 02:19:00.102 * RDB memory usage when created 1.97 Mb
+42:M 20 Jun 2025 02:19:00.103 * DB loaded from disk: 0.001 seconds
+42:M 20 Jun 2025 02:19:00.104 * Ready to accept connections
+42:M 20 Jun 2025 02:19:29.407 * Replica 127.0.0.1:37100 asks for synchronization
+42:M 20 Jun 2025 02:19:29.407 * Partial resynchronization not accepted: Replication ID mismatch (Replica asked for '466eb5f35a87db4a93197f81aa8c520308d8a6d0', my replication IDs are '6c7319da48d0cd69e12517b004fc5bd3993f3b11' and '0000000000000000000000000000000000000000')
+42:M 20 Jun 2025 02:19:29.407 * Replication backlog created, my new replication IDs are '26cfa49365cdc872e0a1cac68257fc643bfae91d' and '0000000000000000000000000000000000000000'
+42:M 20 Jun 2025 02:19:29.407 * Starting BGSAVE for SYNC with target: disk
+42:M 20 Jun 2025 02:19:29.408 * Background saving started by pid 1056
+1056:C 20 Jun 2025 02:19:29.522 * DB saved on disk
+1056:C 20 Jun 2025 02:19:29.523 * RDB: 0 MB of memory used by copy-on-write
+42:M 20 Jun 2025 02:19:29.602 * Background saving terminated with success
+42:M 20 Jun 2025 02:19:29.603 * Synchronization with replica 127.0.0.1:37100 succeeded
