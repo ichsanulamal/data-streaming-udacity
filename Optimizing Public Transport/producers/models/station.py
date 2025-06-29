@@ -19,7 +19,15 @@ class Station(Producer):
 
     def __init__(self, station_id, name, color, direction_a=None, direction_b=None):
         self.name = name
-        topic_name = "org.chicago.cta.station.arrivals.v1"
+        station_name = (
+            name.lower()
+            .replace("/", "_and_")
+            .replace(" ", "_")
+            .replace("-", "_")
+            .replace("'", "")
+        )
+
+        topic_name = f"org.chicago.cta.station.{station_name}.arrivals.v1"
         super().__init__(
             topic_name,
             key_schema=Station.key_schema,

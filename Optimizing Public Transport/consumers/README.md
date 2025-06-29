@@ -156,7 +156,7 @@ Configures logging for the application.
 - **Kafka Topics Used:**
   - `org.chicago.cta.weather.v1`
   - `org.chicago.cta.stations.table.v1`
-  - `org.chicago.cta.station.arrivals.v1`
+  - `org.chicago.cta.station.{station_name}.arrivals.v1`
   - `TURNSTILE_SUMMARY`
 - **Environment:** Requires running Kafka, Schema Registry, and KSQL locally.
 - **Extensibility:** Models and consumers can be extended for additional data sources or analytics.

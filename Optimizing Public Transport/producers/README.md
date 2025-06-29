@@ -113,7 +113,7 @@ producers/
 Each producer emits events to a specific Kafka topic, using Avro schemas for serialization. Example topics:
 - `org.chicago.cta.weather.v1`
 - `org.chicago.cta.turnstile.v1`
-- `org.chicago.cta.station.arrivals.v1`
+- `org.chicago.cta.station.{station_name}.arrivals.v1`
 
 ---
 

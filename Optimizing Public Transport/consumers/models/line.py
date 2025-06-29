@@ -65,7 +65,7 @@ class Line:
             except Exception as e:
                 logger.fatal("bad station? %s, %s", value, e)
         elif (
-            message.topic() == "org.chicago.cta.station.arrivals.v1"
+            ".arrivals.v1" in message.topic()
         ):  # Set the conditional to the arrival topic
             self._handle_arrival(message)
         elif (
